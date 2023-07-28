@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="resolucion">
+        <div class="desktop">
+            <h1>Esto es un ordenador</h1>
+        </div>
+        <div class="tablet">
+            <h1>Esto es un tablet</h1>
+        </div>
+        <div class="movil">            
+            <div class="container">
+                <div id="canvas_div" style="overflow-x: auto;">
+                    <canvas id="canvas" width="400" height="360"></canvas>                   
+                </div>
+                <div>
+                    <b>Lijndikte</b> : <select id="selWidth">
+                        <option value="11">11</option>
+                        <option value="13" selected="selected">13</option>
+                        <option value="15">15</option>
+                    </select>
+                    <b>Kleur</b> : <select id="selColor">
+                        <option value="black">Zwart</option>
+                        <option value="blue" >Blauw</option>
+                        <option value="red">Rood</option>
+                        <option value="green" selected="selected">Groen</option>
+                        <option value="yellow">Geel</option>
+                        <option value="gray">Grijs</option>
+                    </select>
+                </div>
+                <button id="button_clear" onclick="javascript:clearArea();return false;">Schoonmaken</button>
+              </div>
+        </div>
+    </div> 
+
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
