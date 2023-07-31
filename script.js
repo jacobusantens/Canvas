@@ -63,7 +63,7 @@ function clearArea() {
 		var mouseEvent = new MouseEvent("mouseup", {});
 		canvas.dispatchEvent(mouseEvent);
 	}, false);
-  
+
 	canvas.addEventListener("touchmove", function (e) {
 		var touch = e.touches[0];
 		var mouseEvent = new MouseEvent("mousemove", {
@@ -72,3 +72,20 @@ function clearArea() {
 		});
 		canvas.dispatchEvent(mouseEvent);
 	}, false);
+
+  // Prevent scrolling when touching the canvas
+document.body.addEventListener("touchstart", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchend", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchmove", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
